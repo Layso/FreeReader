@@ -6,9 +6,9 @@ import BottomMenuButton from './BottomMenuButton';
 const BottomMenu = (props) => {
 	return(
 		<View style={props.style}>
-			<BottomMenuButton style={styles.button} label="Credits" image={require("../assets/img/credits.png")}/>
-			<BottomMenuButton style={styles.button} label="Scan" image={require("../assets/img/scan.png")}/>
-			<BottomMenuButton style={styles.button} label="History" image={require("../assets/img/history.png")}/>
+			<BottomMenuButton onClick={() => {if (props.onCreditsClicked) props.onCreditsClicked()}} style={styles.button} label="Credits" image={require("../assets/img/credits.png")}/>
+			<BottomMenuButton onClick={() => {if (props.onScanClicked) props.onScanClicked()}} style={styles.button} label="Scan" image={require("../assets/img/scan.png")}/>
+			<BottomMenuButton onClick={() => {if (props.onHistoryClicked) props.onHistoryClicked()}} style={styles.button} label="History" image={require("../assets/img/history.png")}/>
 		</View>
 	)
 }

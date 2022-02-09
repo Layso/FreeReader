@@ -4,10 +4,17 @@ import {View, Image, Text, Pressable, StyleSheet} from 'react-native';
 const BottomMenuButton = (props) => {
 	return(
 		<Pressable style={props.style}
-			onPress={() => console.log('pressed ' + props.label)}
+			onPress={() => {
+				console.log('pressed ' + props.label)
+				if (props.onClick) {
+					props.onClick()
+				}
+			}}
+			/*
 			onPressIn={() => console.log('pressed in ' + props.label)}
         	onPressOut={() => console.log('pressed out ' + props.label)}
         	onLongPress={() => console.log('long press ' + props.label)}
+			*/
         >
 			<View style={styles.root}>
 				<Image style={styles.image} source={props.image}/>
