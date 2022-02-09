@@ -1,4 +1,4 @@
-package com.freereader;
+package com.laysoftware.freereader;
 
 import com.facebook.react.ReactActivity;
 
